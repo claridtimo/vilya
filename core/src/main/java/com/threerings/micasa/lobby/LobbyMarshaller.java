@@ -21,7 +21,7 @@
 
 package com.threerings.micasa.lobby;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 import com.threerings.presents.data.InvocationMarshaller;
 import java.util.List;

@@ -21,7 +21,7 @@
 
 package com.threerings.whirled.spot.data;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 import com.threerings.crowd.data.PlaceConfig;
 import com.threerings.presents.client.InvocationService;

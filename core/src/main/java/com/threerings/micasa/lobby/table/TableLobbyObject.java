@@ -21,7 +21,7 @@
 
 package com.threerings.micasa.lobby.table;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import com.threerings.presents.dobj.DSet;
 
 import com.threerings.parlor.data.Table;

@@ -21,7 +21,7 @@
 
 package com.threerings.whirled.zone.data;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 import com.threerings.crowd.data.PlaceConfig;
 import com.threerings.presents.data.InvocationMarshaller;

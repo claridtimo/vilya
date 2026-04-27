@@ -21,7 +21,7 @@
 
 package com.threerings.whirled.server;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 import com.threerings.presents.data.ClientObject;
 import com.threerings.presents.server.InvocationException;

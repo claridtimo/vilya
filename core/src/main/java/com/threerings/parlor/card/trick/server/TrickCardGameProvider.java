@@ -21,7 +21,7 @@
 
 package com.threerings.parlor.card.trick.server;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 import com.threerings.parlor.card.data.Card;
 import com.threerings.parlor.card.trick.client.TrickCardGameService;

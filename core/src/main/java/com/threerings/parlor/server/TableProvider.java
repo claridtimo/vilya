@@ -21,7 +21,7 @@
 
 package com.threerings.parlor.server;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 import com.threerings.parlor.client.TableService;
 import com.threerings.parlor.data.TableConfig;

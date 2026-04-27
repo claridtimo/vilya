@@ -21,7 +21,7 @@
 
 package com.threerings.stage.server;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 import com.threerings.miso.data.ObjectInfo;
 import com.threerings.presents.client.InvocationService;

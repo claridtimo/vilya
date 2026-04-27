@@ -21,7 +21,7 @@
 
 package com.threerings.parlor.data;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 import com.threerings.parlor.client.TableService;
 import com.threerings.parlor.game.data.GameConfig;

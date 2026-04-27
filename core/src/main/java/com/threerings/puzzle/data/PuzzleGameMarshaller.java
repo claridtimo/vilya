@@ -21,7 +21,7 @@
 
 package com.threerings.puzzle.data;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 import com.threerings.presents.data.InvocationMarshaller;
 import com.threerings.puzzle.client.PuzzleGameService;

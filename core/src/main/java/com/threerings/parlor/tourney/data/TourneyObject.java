@@ -21,7 +21,7 @@
 
 package com.threerings.parlor.tourney.data;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import com.threerings.presents.dobj.DObject;
 import com.threerings.presents.dobj.DSet;
 

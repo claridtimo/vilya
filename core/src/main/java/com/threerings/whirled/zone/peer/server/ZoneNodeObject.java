@@ -21,7 +21,7 @@
 
 package com.threerings.whirled.zone.peer.server;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import com.threerings.presents.dobj.DSet;
 import com.threerings.crowd.peer.data.CrowdNodeObject;
 

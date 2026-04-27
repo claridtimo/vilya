@@ -21,7 +21,7 @@
 
 package com.threerings.parlor.game.data;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import com.samskivert.util.StringUtil;
 
 import com.threerings.util.Name;

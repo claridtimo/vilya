@@ -21,7 +21,7 @@
 
 package com.threerings.micasa.simulator.data;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 import com.threerings.micasa.simulator.client.SimulatorService;
 import com.threerings.parlor.game.data.GameConfig;
