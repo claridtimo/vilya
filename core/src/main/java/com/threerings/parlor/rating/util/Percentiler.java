@@ -213,7 +213,7 @@ public class Percentiler
     {
         if (value < _min) {
             return 0;
-        } else if (value > _max) {
+        } else if (value >= _max) {
             return 100;
         } else {
             return _percentile[toBucketIndex(value)];
