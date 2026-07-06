@@ -118,4 +118,26 @@ public class IntSetStat extends SetStat<Integer>
     protected StreamableArrayIntSet _intSet = new StreamableArrayIntSet();
 
     protected static final int MAX_MAX_SIZE = 255;
+
+    // from interface Streamable
+    public void readObject (com.threerings.io.ObjectInputStream ins)
+        throws java.io.IOException, java.lang.ClassNotFoundException
+    {
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.Stat.class, "_type", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.Stat.class, "_modified", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.Stat.class, "_modCount", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.IntSetStat.class, "_maxSize", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.IntSetStat.class, "_intSet", this, ins);
+    }
+
+    // from interface Streamable
+    public void writeObject (com.threerings.io.ObjectOutputStream out)
+        throws java.io.IOException
+    {
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.Stat.class, "_type", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.Stat.class, "_modified", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.Stat.class, "_modCount", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.IntSetStat.class, "_maxSize", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.IntSetStat.class, "_intSet", this, out);
+    }
 }

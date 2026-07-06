@@ -90,4 +90,24 @@ public class IntArrayStat extends Stat
 
     /** Contains the integer list value of this statistic. */
     protected int[] _value = new int[0];
+
+    // from interface Streamable
+    public void readObject (com.threerings.io.ObjectInputStream ins)
+        throws java.io.IOException, java.lang.ClassNotFoundException
+    {
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.Stat.class, "_type", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.Stat.class, "_modified", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.Stat.class, "_modCount", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.IntArrayStat.class, "_value", this, ins);
+    }
+
+    // from interface Streamable
+    public void writeObject (com.threerings.io.ObjectOutputStream out)
+        throws java.io.IOException
+    {
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.Stat.class, "_type", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.Stat.class, "_modified", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.Stat.class, "_modCount", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.IntArrayStat.class, "_value", this, out);
+    }
 }

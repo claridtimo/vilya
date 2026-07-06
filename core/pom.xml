@@ -21,7 +21,17 @@
     <dependency>
       <groupId>com.threerings</groupId>
       <artifactId>narya</artifactId>
-      <version>1.17</version>
+      <!-- 1.22: the Epic A1 Phase 5 generated streamers reference
+           com.threerings.io.GenStreamUtil (added in narya 1.21) -->
+      <version>1.22</version>
+    </dependency>
+    <dependency>
+      <!-- javax.annotation.Generated on the genservice-generated sources (SOURCE retention, so
+           compile-only); narya 1.17 supplied it transitively, 1.22 no longer does -->
+      <groupId>javax.annotation</groupId>
+      <artifactId>jsr250-api</artifactId>
+      <version>1.0</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.threerings</groupId>

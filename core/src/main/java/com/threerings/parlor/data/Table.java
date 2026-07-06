@@ -467,4 +467,30 @@ public class Table
 
     /** On the server, the usernames that have been banned from this table. */
     protected transient HashSet<Name> _bannedUsers;
+
+    // from interface Streamable
+    public void readObject (com.threerings.io.ObjectInputStream ins)
+        throws java.io.IOException, java.lang.ClassNotFoundException
+    {
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.Table.class, "tableId", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.Table.class, "lobbyOid", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.Table.class, "gameOid", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.Table.class, "players", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.Table.class, "watchers", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.Table.class, "config", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.Table.class, "tconfig", this, ins);
+    }
+
+    // from interface Streamable
+    public void writeObject (com.threerings.io.ObjectOutputStream out)
+        throws java.io.IOException
+    {
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.Table.class, "tableId", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.Table.class, "lobbyOid", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.Table.class, "gameOid", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.Table.class, "players", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.Table.class, "watchers", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.Table.class, "config", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.Table.class, "tconfig", this, out);
+    }
 }

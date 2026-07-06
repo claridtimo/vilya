@@ -59,4 +59,26 @@ public class ByteByteStringMapStat extends StringMapStat
     {
         return Byte.MAX_VALUE;
     }
+
+    // from interface Streamable
+    public void readObject (com.threerings.io.ObjectInputStream ins)
+        throws java.io.IOException, java.lang.ClassNotFoundException
+    {
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.Stat.class, "_type", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.Stat.class, "_modified", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.Stat.class, "_modCount", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.StringMapStat.class, "_keys", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.stats.data.StringMapStat.class, "_values", this, ins);
+    }
+
+    // from interface Streamable
+    public void writeObject (com.threerings.io.ObjectOutputStream out)
+        throws java.io.IOException
+    {
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.Stat.class, "_type", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.Stat.class, "_modified", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.Stat.class, "_modCount", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.StringMapStat.class, "_keys", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.stats.data.StringMapStat.class, "_values", this, out);
+    }
 }

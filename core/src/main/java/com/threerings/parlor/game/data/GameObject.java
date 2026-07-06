@@ -434,4 +434,32 @@ public class GameObject extends PlaceObject
         this.playerStatus[index] = value;
     }
     // AUTO-GENERATED: METHODS END
+
+    // from interface Streamable
+    public void readObject (com.threerings.io.ObjectInputStream ins)
+        throws java.io.IOException, java.lang.ClassNotFoundException
+    {
+        super.readObject(ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.game.data.GameObject.class, "state", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.game.data.GameObject.class, "isRated", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.game.data.GameObject.class, "isPrivate", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.game.data.GameObject.class, "players", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.game.data.GameObject.class, "winners", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.game.data.GameObject.class, "sessionId", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.game.data.GameObject.class, "playerStatus", this, ins);
+    }
+
+    // from interface Streamable
+    public void writeObject (com.threerings.io.ObjectOutputStream out)
+        throws java.io.IOException
+    {
+        super.writeObject(out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.game.data.GameObject.class, "state", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.game.data.GameObject.class, "isRated", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.game.data.GameObject.class, "isPrivate", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.game.data.GameObject.class, "players", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.game.data.GameObject.class, "winners", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.game.data.GameObject.class, "sessionId", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.game.data.GameObject.class, "playerStatus", this, out);
+    }
 }

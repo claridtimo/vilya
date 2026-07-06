@@ -43,4 +43,24 @@ public class TableConfig extends SimpleStreamableObject
 
     /** Whether the table is "private". */
     public boolean privateTable;
+
+    // from interface Streamable
+    public void readObject (com.threerings.io.ObjectInputStream ins)
+        throws java.io.IOException, java.lang.ClassNotFoundException
+    {
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.TableConfig.class, "desiredPlayerCount", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.TableConfig.class, "minimumPlayerCount", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.TableConfig.class, "teamMemberIndices", this, ins);
+        com.threerings.io.GenStreamUtil.readField(com.threerings.parlor.data.TableConfig.class, "privateTable", this, ins);
+    }
+
+    // from interface Streamable
+    public void writeObject (com.threerings.io.ObjectOutputStream out)
+        throws java.io.IOException
+    {
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.TableConfig.class, "desiredPlayerCount", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.TableConfig.class, "minimumPlayerCount", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.TableConfig.class, "teamMemberIndices", this, out);
+        com.threerings.io.GenStreamUtil.writeField(com.threerings.parlor.data.TableConfig.class, "privateTable", this, out);
+    }
 }

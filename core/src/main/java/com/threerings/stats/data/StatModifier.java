@@ -61,7 +61,7 @@ public abstract class StatModifier<T extends Stat>
         throws IOException
     {
         out.writeInt(_type.code());
-        out.defaultWriteObject();
+
     }
 
     /** Reads our custom streamable fields. */
@@ -69,7 +69,7 @@ public abstract class StatModifier<T extends Stat>
         throws IOException, ClassNotFoundException
     {
         _type = Stat.getType(in.readInt());
-        in.defaultReadObject();
+
     }
 
     /**
