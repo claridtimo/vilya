@@ -5,7 +5,7 @@
   <groupId>com.threerings</groupId>
   <artifactId>vilya-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.7.1</version>
+  <version>1.7.2-android1</version>
 
   <name>Vilya</name>
   <description>Facilities for making networked multiplayer games.</description>
@@ -34,7 +34,10 @@
     <connection>scm:git:git://github.com/threerings/vilya.git</connection>
     <developerConnection>scm:git:git@github.com:threerings/vilya.git</developerConnection>
     <url>https://github.com/threerings/vilya/</url>
-    <tag>vilya-1.7.1</tag>
+    <!-- fork release: built from claridtimo/vilya branch epicA1-streamers (regenerated
+         flatten streamers + narya 1.22). New coordinates per the 2026-07-06 incident rule:
+         never republish a fork lib under an existing version. -->
+    <tag>vilya-1.7.2-android1</tag>
   </scm>
 
   <modules>
