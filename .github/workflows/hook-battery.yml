@@ -1,0 +1,17 @@
+name: Hook battery
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+jobs:
+  hook-battery:
+    name: PR-target hook battery
+    # The PreToolUse hook (.claude/hooks/enforce-pr-target.sh) is the enforced backstop against
+    # accidentally opening PRs on the upstream fork parent (fork of greyhavens/*). Verbatim copy
+    # of the bang-game hook (see claridtimo/bang-game#63 for the 21-round review history); the
+    # battery pins every bypass / false-deny class found there. Seconds-fast: bash+python3+grep.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run the enforce-pr-target regression battery
+        run: .claude/hooks/test-enforce-pr-target.sh
